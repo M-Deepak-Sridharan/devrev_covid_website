@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const userControler = require("./controller/userController");
 const mongoose = require("mongoose");
 
 // require('dotenv').config();
@@ -37,3 +38,5 @@ app.post("/post", async (req, res) => {
     res.send({ status: "Something went wrong try again " });
   }
 });
+
+app.post("/login", userControler.signUp);
