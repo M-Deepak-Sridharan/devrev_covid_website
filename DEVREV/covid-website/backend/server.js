@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const userControler = require("./controller/userController");
+const vaccinationControler = require("./controller/vaccinationController");
+const bookVaccine = require("./controller/bookVaccine");
 const mongoose = require("mongoose");
 
 // require('dotenv').config();
@@ -40,3 +42,6 @@ app.post("/post", async (req, res) => {
 });
 
 app.post("/login", userControler.signUp);
+app.post("/addVaccinationCentre", vaccinationControler.createCentre);
+
+app.put("/bookVaccination", bookVaccine.bookVaccination);

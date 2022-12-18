@@ -34,6 +34,12 @@ const userSchema = new mongoose.Schema({
       message: "Password is not same",
     },
   },
+
+  slotAllocated: {
+    type: Number,
+    default: 0,
+  },
+
   passwordChangedAt: {
     type: Date,
   },
