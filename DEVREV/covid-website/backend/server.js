@@ -24,7 +24,7 @@ mongoose
   .catch((e) => console.log(e));
 
 app.listen(5000, () => {
-  console.log("Server is running on port :${port}");
+  console.log(`Server is running on port 5000`);
 });
 
 app.post("/post", async (req, res) => {
@@ -45,3 +45,5 @@ app.post("/login", userControler.signUp);
 app.post("/addVaccinationCentre", vaccinationControler.createCentre);
 
 app.put("/bookVaccination", bookVaccine.bookVaccination);
+
+app.get("/getDoseDetails", vaccinationControler.getDoseDetails);
