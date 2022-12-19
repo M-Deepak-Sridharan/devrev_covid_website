@@ -14,6 +14,6 @@ exports.bookVaccination = async (req, res, next) => {
   });
   console.log(dose);
   res.send({
-    response: `Successfully booked slot ${dose}`,
+    response: `Successfully booked slot no ${dose}`,
   });
 };
