@@ -25,6 +25,6 @@ exports.getDoseDetails = async (req, res, next) => {
     const availableDose = await vaccinationModel.find({ name: req.body.name });
     res.send({ "available dose": availableDose[0].totalDose });
   } else {
-    res.send("user can't view this information");
+    res.send("user cannnot view this information");
   }
 };
